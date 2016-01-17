@@ -8,8 +8,8 @@ However if it's failed to get the size of a stream, it will then set the correct
 decorator to send the body of the request with Chunked transfer encoding as defined in the `RFC 2145`_::
 
     use Http\Discovery\HttpClientDiscovery;
-    use Http\Plugins\PluginClient;
-    use Http\Plugins\ContentLengthPlugin;
+    use Http\Client\Plugin\PluginClient;
+    use Http\Client\Plugin\ContentLengthPlugin;
 
     $contentLengthPlugin = new ContentLengthPlugin();
 
