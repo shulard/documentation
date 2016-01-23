@@ -1,8 +1,7 @@
 Logger Plugin
 =============
 
-Logger plugin logs request, response and exception coming from an `Http\Client\HttpClient` or
-`Http\Client\HttpAsyncClient` with a PSR3_ implementation::
+The `LoggerPlugin` converts requests, responses and exceptions to strings and logs them with a PSR3_ compliant logger::
 
     use Http\Discovery\HttpClientDiscovery;
     use Http\Client\Plugin\PluginClient;
@@ -16,7 +15,7 @@ Logger plugin logs request, response and exception coming from an `Http\Client\H
         [$loggerPlugin]
     );
 
-By default it will use `Http\Message\Formatter\SimpleFormatter` to format the request or the response into a string,
+By default it uses `Http\Message\Formatter\SimpleFormatter` to format the request or the response into a string,
 which will be used in the log message but you can use any formatter implementing the
 `Http\Message\Formatter` interface::
 

@@ -1,7 +1,7 @@
 Cookie Plugin
 =============
 
-Cookie plugins allow you to sore cookies information in a `CookieJar` and reuses them on consequent requests according
+The `CookiePlugin` allow you to store cookies information in a `CookieJar` and reuse them on consequent requests according
 to `RFC 6265`_ specification::
 
     use Http\Discovery\HttpClientDiscovery;
