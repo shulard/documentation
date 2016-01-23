@@ -17,10 +17,10 @@ headers::
 
 The plugin can handle the following encodings:
 
- * chunked: Decode a stream with a chunked encoding (no size in the `Content-Length` header of the response)
- * compress: Decode a stream encoded with the compress filter according to `RFC 1950`_
- * Deflate: Decode a stream encoded with the inflate filter according to `RFC 1951`_
- * gzip: Decode a stream encoded with the gzip filter according to `RFC 1952`_
+ * `chunked`: Decode a stream with a `chunked` encoding (no size in the `Content-Length` header of the response)
+ * `compress`: Decode a stream encoded with the `compress` encoding according to :rfc:`1950`
+ * `deflate`: Decode a stream encoded with the `inflate` encoding according to :rfc:`1951`
+ * `gzip`: Decode a stream encoded with the `gzip` encoding according to :rfc:`1952`
 
 You can also use the decoder plugin to decode only the `Transfer-Encoding` header and not the `Content-Encoding` one
 by setting the first parameter of the constructor to false::
@@ -28,7 +28,3 @@ by setting the first parameter of the constructor to false::
     $decoderPlugin = new DecoderPlugin(false);
 
 This is useful when you want to get the encoded response body, or acting as a proxy.
-
-.. _RFC 1950: https://tools.ietf.org/html/rfc1950
-.. _RFC 1951: https://tools.ietf.org/html/rfc1951
-.. _RFC 1952: https://tools.ietf.org/html/rfc1952

@@ -2,7 +2,7 @@ Cookie Plugin
 =============
 
 The `CookiePlugin` allow you to store cookies information in a `CookieJar` and reuse them on consequent requests according
-to `RFC 6265`_ specification::
+to :rfc:`6265#section-4` specification::
 
     use Http\Discovery\HttpClientDiscovery;
     use Http\Message\CookieJar;
@@ -15,5 +15,3 @@ to `RFC 6265`_ specification::
         HttpClientDiscovery::find(),
         [$cookiePlugin]
     );
-
-.. _RFC 6265: https://tools.ietf.org/html/rfc6265

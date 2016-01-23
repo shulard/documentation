@@ -4,7 +4,7 @@ Content-Length Plugin
 The `ContentLengthPlugin` sets the correct `Content-Length` header value based on the size of the body stream of the
 request. This helps HTTP servers to handle the request.
 
-If the size of the stream can not be determined, the plugin sets the Encoding header to chunked,as defined in
+If the size of the stream can not be determined, the plugin sets the Encoding header to `chunked`, as defined in
 :rfc:`7230#section-4.1`::
 
     use Http\Discovery\HttpClientDiscovery;
@@ -18,9 +18,9 @@ If the size of the stream can not be determined, the plugin sets the Encoding he
         [$contentLengthPlugin]
     );
 
-This plugin is useful when you want to transfer data of unknown size to an http application without consuming memory.
+This plugin is useful when you want to transfer data of unknown size to an HTTP application without consuming memory.
 
-As an example, let's say you want to send a tar archive of the current directory to an api. Normally you would
+As an example, let's say you want to send a tar archive of the current directory to an API. Normally you would
 end up doing this in 2 steps, first saving the result of the tar archive into a file or into the memory of
 PHP with a variable, then sending this content with an HTTP Request.
 
