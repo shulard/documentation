@@ -1,7 +1,7 @@
 Logger Plugin
 =============
 
-The `LoggerPlugin` converts requests, responses and exceptions to strings and logs them with a PSR3_ compliant logger::
+The ``LoggerPlugin`` converts requests, responses and exceptions to strings and logs them with a PSR3_ compliant logger::
 
     use Http\Discovery\HttpClientDiscovery;
     use Http\Client\Plugin\PluginClient;
@@ -15,9 +15,9 @@ The `LoggerPlugin` converts requests, responses and exceptions to strings and lo
         [$loggerPlugin]
     );
 
-By default it uses `Http\Message\Formatter\SimpleFormatter` to format the request or the response into a string,
+By default it uses ``Http\Message\Formatter\SimpleFormatter`` to format the request or the response into a string,
 which will be used in the log message but you can use any formatter implementing the
-`Http\Message\Formatter` interface::
+``Http\Message\Formatter`` interface::
 
     $formatter = new \My\Formatter\Implemenation();
 
